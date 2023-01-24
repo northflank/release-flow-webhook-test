@@ -32,3 +32,6 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/northflank/release-flow-webhook-test:${{ github.SHA }}
+          
+      - name: Trigger release flow
+        run: curl -X GET ${{ secrets.NF_WEBHOOK }}?image_tag=${{ github.SHA }}
