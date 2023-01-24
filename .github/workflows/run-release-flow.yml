@@ -31,4 +31,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: northflank/release-flow-test:${{ github.SHA }}
+          tags: ghcr.io/northflank/release-flow-webhook-test:${{ github.SHA }}
