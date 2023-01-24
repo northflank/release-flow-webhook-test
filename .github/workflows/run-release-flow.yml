@@ -31,4 +31,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: northflank/release-flow-test:${{ env.GITHUB_HEAD_REF }}
+          tags: northflank/release-flow-test:${{ env.BRANCH }}
