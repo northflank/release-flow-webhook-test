@@ -1,0 +1,26 @@
+{
+  "apiVersion": "v1",
+  "spec": {
+    "kind": "Workflow",
+    "spec": {
+      "type": "sequential",
+      "steps": [
+        {
+          "kind": "Release",
+          "spec": {
+            "type": "registry",
+            "origin": {
+              "imagePath": "ghcr.io/northflank/release-flow-webhook-test:${args.image_tag}",
+              "credentials": "github"
+            },
+            "target": {
+              "id": "devel",
+              "type": "service"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "$schema": "https://api.salvo.sh/v1/schemas/release-flow"
+}
