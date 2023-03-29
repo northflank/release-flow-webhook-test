@@ -1,7 +1,5 @@
-# barebones-test-repo
+# Northflank Release Flow Github Actions Example
 
-Simple barebones test repo
+Example repository for automatically building & pushing commits to GitHub Container Registry whenever a pull request is opened or updated, then deploys the image on Northflank as a deployment service.
 
-Dockerfile serves the contents of `testfile` as an nginx server
-
-DockerfileJob echos the contents of `testfile` to the console
+Takes the secret `NF_WEBHOOK`, which should be the URL of the webhook trigger generated in the release flow settings on Northflank.
