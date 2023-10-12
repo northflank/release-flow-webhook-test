@@ -14,7 +14,7 @@
               "credentials": "github"
             },
             "target": {
-              "id": "${args.serviceId}",
+              "id": "devel",
               "type": "service"
             }
           }
